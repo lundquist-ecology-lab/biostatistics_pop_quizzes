@@ -1,0 +1,19 @@
+---
+title:  Biol/Math 218 pop quiz 1
+author: Your Name Here
+output:
+  rmdformats::downcute:
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: false
+    highlight: tango
+    downcute_theme: "chaos"
+    toc_depth: 3
+knit: (function(input, ...) {
+    rmarkdown::render(
+      input,
+      output_dir = "pop_quiz_html"
+    )
+  })
+---
