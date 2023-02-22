@@ -1,0 +1,83 @@
+---
+title:  Biol/Math 218 pop quiz 1 + 2
+author: Your Name Here
+output:
+  rmdformats::downcute:
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: false
+    highlight: tango
+    downcute_theme: "chaos"
+    toc_depth: 3
+knit: (function(input, ...) {
+    rmarkdown::render(
+      input,
+      output_dir = "pop_quiz_html"
+    )
+  })
+---
+
+## Introduction
+
+A colleague is interested in testing if
+knocking down (disabling) a particular gene impacts
+wing length in *Drosophila melanogaster*, common fruit flies.
+However, she does not know the natural frequency of *Drosophila* 
+wing lengths. To determine this, she measured the wing lengths
+of 60 flies (30 male and 30 female).
+
+Her data is provided in `flies.csv`, but she does not
+know how to use R.
+
+## Part 01
+In the space below, provide a code block that will 
+
+1. Import the data file
+2. Produce a properly labeled plot(s) to display the frequencies of the wing lengths in the sample
+
+```{r}
+``` 
+
+## Part 02
+Below, describe the figure, including the shape of the plot, the distribution 
+of wing lengths and the most common wing length(s) in her sample. 
+
+Also, are there any important patterns in the frequency data? If so, provide a biologically
+relevant cause of the patterns in the data.
+
+`Answer:`
+
+## Part 03 
+
+A researcher provides you a data set, that includes information about the amount of 
+periphyton (a mixture of algae and bacteria) that live in urban streams
+in upstate New York. 
+
+The data is provided here:
+
+```{r}
+url <- "https://raw.githubusercontent.com/lundquist-ecology-lab/biostatistics/main/example_data/periphyton_data.csv"
+periphyton <- read.csv(url, header = TRUE, stringsAsFactors = TRUE)
+```
+They are interested in producing a plot at the pattern of average chlorophyl a
+in the periphyton (a measure of health) and the  pH of the water. However, they are really
+busy and know that you are an expert in basic plotting in R and do
+not bother to tell you much else about the data.
+
+## Step 1:
+Using functions in R, determine what variables were measured in this 
+data set. 
+
+Then indicate: 
+  - Which variables you are are going to plot
+  - Whether they are numeric or categorical
+  - State which type of plot you are going to produce and why
+
+## Step 2:
+Using the plot() function in R, produce the appropriate plot and
+then in two or three sentences, interpret any patterns you see in the data
+in a biological way. 
+
+Note: Make sure that your plot is properly labeled and has the appropriate
+y and x limits
