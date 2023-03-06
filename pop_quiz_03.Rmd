@@ -1,0 +1,67 @@
+---
+title:  Biol/Math 218 pop quiz 3
+author: Your Name Here
+output:
+  rmdformats::downcute:
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: false
+    highlight: tango
+    downcute_theme: "chaos"
+    toc_depth: 3
+knit: (function(input, ...) {
+    rmarkdown::render(
+      input,
+      output_dir = "pop_quiz_html"
+    )
+  })
+---
+
+## Introduction 
+
+Your graduate advisor would like you to take a look at some data from a colleague of hers.
+This data is found on the website:
+
+"https://raw.githubusercontent.com/lundquist-ecology-lab/NYC_tree_pit_biodiversity/main/data/number_of_tree_pits.csv"
+
+Import the data in the code block below
+
+```{r data_import}
+
+```
+
+She tells you that two students went out to collect insects from tree pits in
+New York City and she is not sure if they did an even amount of work and wants you
+to summarize the data for her.
+
+This is what she wants to know:
+
+1) How many tree pits in total were collected from?
+
+```{r}
+
+```
+`Answer:`
+
+2) How many tree pits each student collected from?
+
+```{r}
+
+```
+`Answer:`
+
+3) What was the average number of tree pits each student collected from per district?
+
+```{r}
+
+```
+`Answer:`
+
+4) What are the variances of the number of tree pits each student collected from per district?
+
+```{r}
+
+```
+
+`Answer:`
