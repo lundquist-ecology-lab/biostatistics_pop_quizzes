@@ -1,0 +1,45 @@
+---
+title:  Biol/Math 218 pop quiz 4
+author: Your Name Here
+output:
+  rmdformats::downcute:
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: false
+    highlight: tango
+    downcute_theme: "chaos"
+    toc_depth: 3
+knit: (function(input, ...) {
+    rmarkdown::render(
+      input,
+      output_dir = "pop_quiz_html"
+    )
+  })
+---
+
+## Question 1
+In a small town, there is a rare genetic disorder called Zeta Syndrome, which affects 1 in 10,000 people. A biotech company has developed a diagnostic test for this disorder. The test has a 99% true positive rate (i.e., it correctly identifies 99% of people with the disorder) and a 98% true negative rate (i.e., it correctly identifies 98% of people without the disorder).
+
+A person from this town decides to take the test and receives a positive result. What is the probability that this person actually has Zeta Syndrome?
+
+Provide the correct probability equation and answer below. Make sure to show all work.
+
+```{r}
+
+```
+## Question 2
+I asked you to check out data sources that you might be able to use for your final project. The first step in any data analysis project is to download the data and explore it. For **two** data sources do the following (and include the required code blocks)
+
+1) Import the data into R and save it as a .csv
+2) Provide code to list the variable names and also provide information on which variables are numeric (continuous or discrete) and those that are categorical variables. Also note if you have any proportion data.
+3) Determine which variables may be considered dependent variables and which might be independent variables.
+4) Mean and standard error of at least two of your numeric variables.
+5) Produce a histogram for at least two of you numeric variables.
+
+## Question 3
+A researcher would like to design a student to see if a a new drug treatment reduce the symptoms of a particular disease in patients over the age of 65. What are some of considerations that
+the researcher needs to consider while designing her experiment and what are some of the
+possible limitations? Be as specific as possible using terms and concepts from chapter 06 and 14.
+
+Feel free to provide a bulleted or enumerated list with explanations.

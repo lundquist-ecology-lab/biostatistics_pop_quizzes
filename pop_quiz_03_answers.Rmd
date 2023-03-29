@@ -1,0 +1,101 @@
+---
+title:  Biol/Math 218 pop quiz 3
+author: Answer sheet
+output:
+  rmdformats::downcute:
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: false
+    highlight: tango
+    downcute_theme: "chaos"
+    toc_depth: 3
+knit: (function(input, ...) {
+    rmarkdown::render(
+      input,
+      output_dir = "pop_quiz_html"
+    )
+  })
+---
+
+## Introduction 
+
+Your graduate advisor would like you to take a look at some data from a colleague of hers.
+This data is found on the website:
+
+"https://raw.githubusercontent.com/lundquist-ecology-lab/NYC_tree_pit_biodiversity/main/data/number_of_tree_pits.csv"
+
+Import the data in the code block below
+
+```{r data_import}
+
+tmp <- tempfile(fileext = ".csv")
+download.file(url = "https://raw.githubusercontent.com/lundquist-ecology-lab/NYC_tree_pit_biodiversity/main/data/number_of_tree_pits.csv",
+            destfile = tmp)
+trees <- read.csv(tmp, header = TRUE, stringsAsFactors = TRUE)
+head(trees)
+
+```
+
+She tells you that two students went out to collect insects from tree pits in
+New York City and she is not sure if they did an even amount of work and wants you
+to summarize the data for her.
+
+This is what she wants to know:
+
+1) How many tree pits in total were collected from?
+
+```{r}
+
+# There is a typo in this data, sometimes that happens and is realatively easy to deal with
+trees$number_of_pits <- trees$numer_of_pits
+print(sum(trees$number_of_pits))
+```
+`Answer:`
+
+2) How many tree pits each student collected from?
+
+```{r}
+
+A <- trees$number_of_pits[trees$collector == "A"]
+print(sum(A))
+
+B <- trees$number_of_pits[trees$collector == "B"]
+print(sum(B))
+
+```
+`Answer:`
+
+3) What was the average number of tree pits each student collected from per district?
+
+```{r}
+levels(trees$district)
+
+A_data <- subset(trees, trees$collector == "A")
+
+A10 <- sum(A_data$number_of_pits[A_data$district == "D10"])
+A7 <- sum(A_data$number_of_pits[A_data$district == "D7"])
+A8 <- sum(A_data$number_of_pits[A_data$district == "D8"])
+A9 <- sum(A_data$number_of_pits[A_data$district == "D9"])
+
+print(mean(c(A10, A7, A8, A9)))
+
+B_data <- subset(trees, trees$collector == "B")
+
+B10 <- sum(B_data$number_of_pits[B_data$district == "D10"])
+B7 <- sum(B_data$number_of_pits[B_data$district == "D7"])
+B8 <- sum(B_data$number_of_pits[B_data$district == "D8"])
+B9 <- sum(B_data$number_of_pits[B_data$district == "D9"])
+
+print(mean(c(B10, B7, B8, B9)))
+```
+`Answer:`
+
+4) What are the variances of the number of tree pits each student collected from per district?
+
+```{r}
+print(var(c(A10, A7, A8, A9)))
+print(var(c(B10, B7, B8, B9)))
+```
+
+`Answer:`
